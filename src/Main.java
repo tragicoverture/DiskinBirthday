@@ -24,16 +24,25 @@ public class Main {
             for (int i = 0; i < StardisksMenu.size(); i++) { // displays StardisksMenu
                 System.out.println((i + 1) + ". " + StardisksMenu.get(i).getName());
             }
-            int ans = Integer.parseInt(diskin.readLine());
-            if (ans < 0 || ans > StardisksMenu.size()) {
-                System.out.println("Sorry! That item doesn't exist.");
+            try {
+                int ans = Integer.parseInt(diskin.readLine());
+                if (ans < 0 || ans > StardisksMenu.size()) {
+                    System.out.println("Sorry! That item doesn't exist.");
+                }
+                else {
+                    System.out.println("**DISKIN**\n" + StardisksMenu.get(ans -1).getName() + "\nThank you for your order!");
+                    System.out.println(StardisksMenu.get(ans - 1).toString());
+                }
+                System.out.println("Would you like another item? (yes/no)");
+                s = diskin.readLine();
+                while (!s.equalsIgnoreCase("yes") && (!s.equalsIgnoreCase("no"))) {
+                    System.out.println("Sorry, I don't understand...Try again? (yes/no) ");
+                    s = diskin.readLine();
+                }
+            } catch (NumberFormatException nfe) {
+                System.out.println("Sorry, I don't understand...Try again? (yes/no) ");
+                s = diskin.readLine();
             }
-            else {
-                System.out.println("**DISKIN**\n" + StardisksMenu.get(ans -1).getName() + "\nThank you for your order!");
-                System.out.println(StardisksMenu.get(ans - 1).toString());
-            }
-            System.out.println("Would you like another item? (yes/no)");
-            s = diskin.readLine();
             while (!s.equalsIgnoreCase("yes") && (!s.equalsIgnoreCase("no"))) {
                 System.out.println("Sorry, I don't understand...Try again? (yes/no) ");
                 s = diskin.readLine();
@@ -42,6 +51,6 @@ public class Main {
         System.out.println("""
                 Sorry to see you go!
                 Happy Birthday Mrs. Diskin!!!
-                (created by Vivek Kirpalani and Tiffany Qiu)""");
+                -your amazing students :)""");
     }
 }
