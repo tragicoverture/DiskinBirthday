@@ -7,7 +7,7 @@ Bodhi Geslani
 Nick Ditieri
 Eric Liu
 Seth Margolin
-Evan Sun
+Evan Sun 
 Jonathan Chen
 Aiden Hwang
 Ryan Chong
@@ -17,3 +17,5 @@ Noah Svetcov
 Jonathan Cheng
 Aslan Wang
 Victoria Tan
+Tiffany Qiu
+Vivek Kirpalani
